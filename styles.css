@@ -1,12 +1,112 @@
-body{
-    background-color: #121820;
-    color:#ffffff
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-h2{
-    color: aquamarine;
-    text-decoration: underline;
+
+#quiz-container {
+  background: #f5f5f5;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  width: 450px;
+  max-width: 95vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-h3{
-    color: blue;
-    font-family: Arial, Helvetica, sans-serif;
+
+#question-card {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 1.3rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+#counter {
+  font-weight: 600;
+  color: #555;
+  margin-top: -15px;
+  font-size: 1rem;
+  user-select: none;
+}
+
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#answers button {
+  background-color: #2979ff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(41, 121, 255, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+#answers button:hover:not(:disabled) {
+  background-color: #0059c1;
+}
+
+#answers button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+#answers button.correct {
+  background-color: #4caf50 !important;
+  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.6);
+}
+
+#answers button.wrong {
+  background-color: #f44336 !important;
+  box-shadow: 0 3px 8px rgba(244, 67, 54, 0.6);
+}
+
+#feedback {
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-height: 30px;
+  color: #333;
+  user-select: none;
+  min-height: 40px;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#controls button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #1976d2;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+#controls button:hover {
+  background-color: #004ba0;
 }

@@ -562,7 +562,610 @@ const gatherQuizData = [
     ],
     answer: 0,
   },
+  {
+    question: "What is the primary purpose of reviewing organisational documents?",
+    options: [
+      "To find errors in employee records",
+      "To identify data required for the project",
+      "To schedule meetings",
+      "To create marketing materials",
+    ],
+    answer: 1,
+  },
+  {
+    question: "Which document might help identify company structure and roles?",
+    options: [
+      "Organisational chart",
+      "Meeting minutes",
+      "Product brochures",
+      "Website home page",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why is document analysis an efficient data gathering technique?",
+    options: [
+      "It requires interviewing all staff",
+      "It provides complete and mostly factual data",
+      "It is the most expensive method",
+      "It avoids any bias",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What type of documents include call logs and email records?",
+    options: [
+      "Historical documents",
+      "Financial records",
+      "Record-based data",
+      "Policy documents",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is a risk of relying solely on document analysis?",
+    options: [
+      "Data may be incomplete or outdated",
+      "Too much data is collected",
+      "It requires external consultants",
+      "It is always biased",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the purpose of project records?",
+    options: [
+      "They track project progress and evaluations",
+      "They are used for marketing",
+      "They replace user manuals",
+      "They list employee birthdays",
+    ],
+    answer: 0,
+  },
+  {
+    question: "How do logs differ from diaries?",
+    options: [
+      "Logs are retrospective, diaries are real-time",
+      "Logs record ongoing events, diaries are personal reflections",
+      "Diaries are official, logs are personal",
+      "There is no difference",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What are policies in an organisation?",
+    options: [
+      "Step-by-step instructions for tasks",
+      "Guidelines outlining values and principles",
+      "Employee contact lists",
+      "Project budgets",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What do procedures provide that policies do not?",
+    options: [
+      "General business goals",
+      "Specific instructions and steps for tasks",
+      "Legal compliance",
+      "Marketing strategies",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What is sampling in data gathering?",
+    options: [
+      "Collecting information from everyone",
+      "Collecting data from a subset of people",
+      "Ignoring data collection",
+      "Using only online sources",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What does randomisation in sampling mean?",
+    options: [
+      "Selecting samples without any predetermined pattern",
+      "Selecting the first available records",
+      "Choosing only positive feedback",
+      "Collecting data from management only",
+    ],
+    answer: 0,
+  },
+  {
+    question: "How does systematic sampling reduce variance?",
+    options: [
+      "By selecting data spread evenly across the sample size",
+      "By using only random numbers",
+      "By ignoring outliers",
+      "By focusing on only one department",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why are questionnaires useful?",
+    options: [
+      "They collect feedback quickly from many respondents",
+      "They require face-to-face interviews",
+      "They avoid questions altogether",
+      "They are used for financial data only",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is an advantage of interviews over questionnaires?",
+    options: [
+      "Interviews are faster to conduct",
+      "Interviews help validate gathered information",
+      "Interviews require no preparation",
+      "Interviews are anonymous",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What is the role of a focus group?",
+    options: [
+      "To provide user feedback on a product",
+      "To conduct one-on-one interviews",
+      "To analyse financial records",
+      "To train employees",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What risk is associated with focus groups?",
+    options: [
+      "Dominance of popular opinions suppressing minority views",
+      "They always produce biased results",
+      "They cost too much",
+      "They replace surveys",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What distinguishes passive observation?",
+    options: [
+      "No interaction with observed stakeholders",
+      "Asking many questions during observation",
+      "Taking notes after the event only",
+      "Ignoring the observed process",
+    ],
+    answer: 0,
+  },
+  {
+    question: "When is active observation preferable?",
+    options: [
+      "When wanting detailed process understanding with stakeholder input",
+      "When you want to avoid disruptions",
+      "When only automated data is used",
+      "When no stakeholders are available",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are internal sources of information in business?",
+    options: [
+      "Emails, customer data, internal reports",
+      "Competitor websites",
+      "Industry journals",
+      "Social media posts",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are external sources of business information?",
+    options: [
+      "Industry journals and competitor websites",
+      "Employee attendance records",
+      "Internal emails",
+      "Project meeting minutes",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are Critical Success Factors (CSFs)?",
+    options: [
+      "Key elements essential for business success",
+      "Financial targets only",
+      "Marketing slogans",
+      "Staff training manuals",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Which dimension is NOT part of business critical factors?",
+    options: [
+      "Strategic",
+      "Environmental",
+      "Financial only",
+      "Temporal",
+    ],
+    answer: 2,
+  },
+  {
+    question: "Why is timely data analysis important?",
+    options: [
+      "It helps identify missing info and supports stakeholder decisions",
+      "It delays project completion",
+      "It increases costs unnecessarily",
+      "It replaces project planning",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What should be done if discrepancies appear in gathered data?",
+    options: [
+      "Repeat data elicitation for unclear components",
+      "Ignore discrepancies",
+      "Cancel the project",
+      "Remove all qualitative data",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the purpose of documenting data analysis?",
+    options: [
+      "To report findings clearly to stakeholders",
+      "To create marketing content",
+      "To store files for legal reasons",
+      "To train new staff only",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is a sign-off in stakeholder management?",
+    options: [
+      "Formal approval of requirements and analysis",
+      "Email feedback only",
+      "Project cancellation notice",
+      "Budget approval",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Which tools can assist in complex data analysis?",
+    options: [
+      "Statistical software like Prism",
+      "Simple calculators only",
+      "Manual spreadsheets without formulas",
+      "Email clients",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why is transparency important in data processes?",
+    options: [
+      "Builds trust and reduces long-term business risks",
+      "Increases data storage needs",
+      "Makes projects slower",
+      "Reduces quality",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the first step in preparing data for analysis?",
+    options: [
+      "Ensuring data is adequate, accurate, and relevant",
+      "Writing the final report",
+      "Hiring staff",
+      "Purchasing software",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the value of analysing grouped stakeholder responses?",
+    options: [
+      "To identify common requirements and conflicts",
+      "To reduce the number of stakeholders",
+      "To avoid difficult decisions",
+      "To delay project milestones",
+    ],
+    answer: 0,
+  },
 ];
+const clientEngagementQuizData = [
+  {
+    question: "What does a strategic plan primarily outline?",
+    options: [
+      "How system components meet IT and business goals",
+      "Daily employee schedules",
+      "Product marketing strategies",
+      "Financial investment plans only",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is strategic planning?",
+    options: [
+      "Defining goals and how they will be achieved and resourced",
+      "Planning employee holidays",
+      "Writing user manuals",
+      "Setting product prices",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Which three angles does strategic planning consider?",
+    options: [
+      "Current state, desired state, path to desired state",
+      "Budget, marketing, sales",
+      "Legal issues, HR, accounting",
+      "Competitors, products, customers",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What does a vision statement describe?",
+    options: [
+      "What an organisation hopes to achieve in the future",
+      "Daily tasks of employees",
+      "Company’s financial details",
+      "How to implement strategies",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is an example of a vision statement?",
+    options: [
+      "A personal computer in every home",
+      "We sell computers worldwide",
+      "Our budget is $5 million",
+      "Monthly sales targets",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What does a mission statement describe?",
+    options: [
+      "The fundamental purpose and current activities of an organisation",
+      "Future goals and aspirations",
+      "Employee salaries",
+      "Marketing campaigns",
+    ],
+    answer: 0,
+  },
+  {
+    question: "How does a mission statement differ from a vision statement?",
+    options: [
+      "Mission describes current purpose; vision describes future hopes",
+      "Mission is about finances; vision is about products",
+      "Mission is only for HR; vision is for marketing",
+      "They are the same",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are organisational values?",
+    options: [
+      "Core beliefs and ethics guiding the organisation",
+      "Marketing slogans",
+      "Employee roles",
+      "IT policies",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why are values important for an organisation?",
+    options: [
+      "They influence long-term health and relationships",
+      "They set product prices",
+      "They define employee pay scales",
+      "They schedule meetings",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the diagnosing step in strategic planning?",
+    options: [
+      "Analysing the current business situation",
+      "Implementing new policies",
+      "Hiring new staff",
+      "Writing the vision statement",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Which analysis tool assesses strengths, weaknesses, opportunities, and threats?",
+    options: [
+      "SWOT analysis",
+      "PEST analysis",
+      "Financial audit",
+      "Customer survey",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is an example of an external factor in environmental analysis?",
+    options: [
+      "Competitor actions",
+      "Employee skills",
+      "Internal processes",
+      "Company culture",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is an example of an internal factor in environmental analysis?",
+    options: [
+      "Employee capabilities",
+      "Market trends",
+      "Regulations",
+      "Competitor pricing",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are tangible resources?",
+    options: [
+      "Assets that can be seen and quantified, like equipment",
+      "Employee knowledge",
+      "Company reputation",
+      "Trust among staff",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are intangible resources?",
+    options: [
+      "Assets like knowledge, trust, and reputation",
+      "Physical buildings",
+      "Manufacturing machines",
+      "Financial reports",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What defines an organisation’s capabilities?",
+    options: [
+      "Knowledge and skills of employees",
+      "Marketing budget",
+      "IT infrastructure",
+      "Product designs",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is a core competency?",
+    options: [
+      "A valuable, rare, hard-to-imitate skill or capability",
+      "A general business activity",
+      "An entry-level task",
+      "A financial asset",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is competitive advantage?",
+    options: [
+      "Ability to outperform competitors in key areas",
+      "Having more employees",
+      "Owning more assets",
+      "Spending more on marketing",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why is SWOT analysis important?",
+    options: [
+      "It helps develop better organisational strategy",
+      "It identifies employee salaries",
+      "It schedules meetings",
+      "It calculates profits",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What are business goals?",
+    options: [
+      "Expected accomplishments over a period",
+      "Employee attendance records",
+      "Monthly expenses",
+      "Company logos",
+    ],
+    answer: 0,
+  },
+  {
+    question: "How do objectives differ from goals?",
+    options: [
+      "Objectives are more specific and measurable",
+      "Goals are more specific than objectives",
+      "They are the same",
+      "Objectives are unrelated to goals",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What does ‘SMART’ stand for in goal setting?",
+    options: [
+      "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "Simple, Manageable, Accurate, Realistic, Timely",
+      "Strategic, Measurable, Accountable, Reliable, Tested",
+      "Strong, Meaningful, Ambitious, Relevant, Tactical",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Which of these is NOT a SMART goal characteristic?",
+    options: [
+      "Ambiguous",
+      "Specific",
+      "Measurable",
+      "Time-bound",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the last step in the four-step strategic planning process?",
+    options: [
+      "Realising: developing an action plan",
+      "Diagnosing the situation",
+      "Conceiving goals",
+      "Vision statement creation",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What does action planning involve?",
+    options: [
+      "Specifying activities, responsibilities, timelines, and performance monitoring",
+      "Hiring new staff",
+      "Writing mission statements",
+      "Conducting interviews",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why is monitoring and evaluating goals important?",
+    options: [
+      "To track progress and measure success",
+      "To hire more employees",
+      "To create new marketing campaigns",
+      "To write new policies",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Which ICT unit aligns with matching ICT needs to enterprise strategy?",
+    options: [
+      "ICTICT517",
+      "BSBCRT512",
+      "ICTSAS527",
+      "BSBXTW401",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the purpose of strategic ICT planning?",
+    options: [
+      "To ensure ICT supports overall business strategy",
+      "To manage daily IT tasks",
+      "To schedule meetings",
+      "To recruit staff",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Who should be involved in setting organisational vision and mission?",
+    options: [
+      "Senior management and key stakeholders",
+      "Only HR staff",
+      "Customers only",
+      "IT technicians only",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is a key benefit of having clear strategic goals?",
+    options: [
+      "Provides direction and focus for the organisation",
+      "Increases marketing budget",
+      "Improves employee salaries",
+      "Reduces office space",
+    ],
+    answer: 0,
+  },
+];
+
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -576,15 +1179,27 @@ const feedbackDiv = document.getElementById("feedback");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const counterDiv = document.getElementById("counter");
+const controls = document.getElementById("controls");  // <-- added
 
 const questionCountSelect = document.getElementById("question-count");
 const quizTypeSelect = document.getElementById("quiz-type");
 
+const quizMenu = document.getElementById("quiz-menu");
+const quizContainer = document.getElementById("quiz-container");
+const quizCards = document.querySelectorAll(".quiz-card");
+const logoLink = document.getElementById("logo-link");
+const inQuizItems = document.querySelectorAll(".in-quiz");
+
+// === QUIZ FLOW ===
 function loadQuestion() {
   answered = false;
   feedbackDiv.textContent = "";
   nextBtn.style.display = "none";
   restartBtn.style.display = "none";
+
+  // Remove old result icon if any
+  const oldIcon = document.getElementById("result-icon");
+  if (oldIcon) oldIcon.remove();
 
   const currentQ = selectedQuizData[currentQuestionIndex];
 
@@ -608,7 +1223,7 @@ function answerQuestion(selectedIndex) {
   const currentQ = selectedQuizData[currentQuestionIndex];
   const buttons = answersDiv.querySelectorAll("button");
 
-  // Remove any old result icon
+  // Remove old result icon if present
   const oldIcon = document.getElementById("result-icon");
   if (oldIcon) oldIcon.remove();
 
@@ -618,13 +1233,13 @@ function answerQuestion(selectedIndex) {
     if (idx === selectedIndex && idx !== currentQ.answer) btn.classList.add("wrong");
   });
 
-  // Create the result icon
+  // Add correct/wrong image near the Next button inside controls div
   const img = document.createElement("img");
   img.id = "result-icon";
   img.src = selectedIndex === currentQ.answer ? "images/correct.png" : "images/wrong.png";
   img.alt = selectedIndex === currentQ.answer ? "Correct" : "Wrong";
   img.className = "result-icon";
-  questionCard.appendChild(img);
+  controls.appendChild(img);  // <-- changed from questionCard.appendChild(img);
 
   if (selectedIndex === currentQ.answer) {
     feedbackDiv.textContent = "Correct!";
@@ -640,8 +1255,14 @@ function answerQuestion(selectedIndex) {
   }
 }
 
+// === BUTTON HANDLERS ===
 nextBtn.addEventListener("click", () => {
   currentQuestionIndex++;
+  
+  // Remove old result icon when moving to next question
+  const oldIcon = document.getElementById("result-icon");
+  if (oldIcon) oldIcon.remove();
+
   loadQuestion();
 });
 
@@ -651,26 +1272,59 @@ restartBtn.addEventListener("click", () => {
 
 questionCountSelect.addEventListener("change", () => {
   const value = questionCountSelect.value;
-  maxQuestions = value === "all" 
-    ? selectedQuizData.length 
+  maxQuestions = value === "all"
+    ? selectedQuizData.length
     : Math.min(parseInt(value), selectedQuizData.length);
   restartQuiz();
 });
 
 quizTypeSelect.addEventListener("change", () => {
-  if (quizTypeSelect.value === "gather") {
+  selectQuiz(quizTypeSelect.value);
+});
+
+// === MENU NAVIGATION ===
+quizCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const quizType = card.dataset.quiz;
+    selectQuiz(quizType);
+  });
+});
+
+logoLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  showMenu();
+});
+
+// === QUIZ SELECTION ===
+function selectQuiz(quizType) {
+  if (quizType === "gather") {
     selectedQuizData = gatherQuizData;
+  } else if (quizType === "client-engagement") {
+    selectedQuizData = clientEngagementQuizData;
   } else {
     selectedQuizData = osQuizData;
   }
+
+  quizTypeSelect.value = quizType; // sync dropdown
   const value = questionCountSelect.value;
-  maxQuestions = value === "all" 
-    ? selectedQuizData.length 
+  maxQuestions = value === "all"
+    ? selectedQuizData.length
     : Math.min(parseInt(value), selectedQuizData.length);
 
-  restartQuiz();
-});
+  quizMenu.style.display = "none";
+  quizContainer.style.display = "block";
+  inQuizItems.forEach(item => item.style.display = "inline-block");
 
+  restartQuiz();
+}
+
+function showMenu() {
+  quizMenu.style.display = "grid";
+  quizContainer.style.display = "none";
+  inQuizItems.forEach(item => item.style.display = "none");
+}
+
+// === RESET QUIZ ===
 function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -679,8 +1333,13 @@ function restartQuiz() {
   feedbackDiv.textContent = "";
   nextBtn.style.display = "none";
   restartBtn.style.display = "none";
+
+  // Remove old result icon on restart
+  const oldIcon = document.getElementById("result-icon");
+  if (oldIcon) oldIcon.remove();
 }
 
+// === SCORE DISPLAY ===
 function showScore() {
   questionCard.innerHTML = `
     <div>Your final score is:</div>
@@ -690,11 +1349,17 @@ function showScore() {
   `;
   answersDiv.innerHTML = "";
   feedbackDiv.textContent = "";
+
+  // Remove icon on score display
+  const oldIcon = document.getElementById("result-icon");
+  if (oldIcon) oldIcon.remove();
+
   nextBtn.style.display = "none";
   restartBtn.style.display = "inline-block";
   updateCounter(true);
 }
 
+// === COUNTER ===
 function updateCounter(finished = false) {
   if (finished) {
     counterDiv.textContent = "";
@@ -703,6 +1368,7 @@ function updateCounter(finished = false) {
   }
 }
 
+// === SHUFFLE ===
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -710,5 +1376,7 @@ function shuffleArray(array) {
   }
 }
 
-shuffleArray(selectedQuizData);
-loadQuestion();
+// Start with menu visible
+showMenu();
+
+

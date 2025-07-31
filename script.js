@@ -264,6 +264,8 @@ const quizData = [
 let currentQuestionIndex = 0;
 let score = 0;
 let answered = false;
+let selectedQuizData = quizData;
+let maxQuestions = 10;
 
 const questionCard = document.getElementById("question-card");
 const answersDiv = document.getElementById("answers");
@@ -272,13 +274,16 @@ const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const counterDiv = document.getElementById("counter");
 
+const questionCountSelect = document.getElementById("question-count");
+const quizTypeSelect = document.getElementById("quiz-type");
+
 function loadQuestion() {
   answered = false;
   feedbackDiv.textContent = "";
   nextBtn.style.display = "none";
   restartBtn.style.display = "none";
 
-  const currentQ = quizData[currentQuestionIndex];
+  const currentQ = selectedQuizData[currentQuestionIndex];
 
   questionCard.textContent = currentQ.question;
   answersDiv.innerHTML = "";
@@ -297,18 +302,26 @@ function answerQuestion(selectedIndex) {
   if (answered) return;
   answered = true;
 
-  const currentQ = quizData[currentQuestionIndex];
+  const currentQ = selectedQuizData[currentQuestionIndex];
   const buttons = answersDiv.querySelectorAll("button");
+
+  // Remove any old result icon
+  const oldIcon = document.getElementById("result-icon");
+  if (oldIcon) oldIcon.remove();
 
   buttons.forEach((btn, idx) => {
     btn.disabled = true;
-    if (idx === currentQ.answer) {
-      btn.classList.add("correct");
-    }
-    if (idx === selectedIndex && idx !== currentQ.answer) {
-      btn.classList.add("wrong");
-    }
+    if (idx === currentQ.answer) btn.classList.add("correct");
+    if (idx === selectedIndex && idx !== currentQ.answer) btn.classList.add("wrong");
   });
+
+  // Create the result icon
+  const img = document.createElement("img");
+  img.id = "result-icon";
+  img.src = selectedIndex === currentQ.answer ? "images/correct.png" : "images/wrong.png";
+  img.alt = selectedIndex === currentQ.answer ? "Correct" : "Wrong";
+  img.className = "result-icon";
+  questionCard.appendChild(img);
 
   if (selectedIndex === currentQ.answer) {
     feedbackDiv.textContent = "Correct!";
@@ -317,7 +330,7 @@ function answerQuestion(selectedIndex) {
     feedbackDiv.textContent = `Wrong! The correct answer is: ${currentQ.options[currentQ.answer]}`;
   }
 
-  if (currentQuestionIndex < quizData.length - 1) {
+  if (currentQuestionIndex < maxQuestions - 1) {
     nextBtn.style.display = "inline-block";
   } else {
     showScore();
@@ -330,20 +343,35 @@ nextBtn.addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
+  restartQuiz();
+});
+
+questionCountSelect.addEventListener("change", () => {
+  const value = questionCountSelect.value;
+  maxQuestions = value === "all" ? quizData.length : parseInt(value);
+  restartQuiz();
+});
+
+quizTypeSelect.addEventListener("change", () => {
+  selectedQuizData = quizData;
+  restartQuiz();
+});
+
+function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
-  shuffleArray(quizData);
+  shuffleArray(selectedQuizData);
   loadQuestion();
   feedbackDiv.textContent = "";
   nextBtn.style.display = "none";
   restartBtn.style.display = "none";
-});
+}
 
 function showScore() {
   questionCard.innerHTML = `
     <div>Your final score is:</div>
     <div style="font-size: 2em; margin-top: 10px; color: #1976d2;">
-      ${score} / ${quizData.length}
+      ${score} / ${maxQuestions}
     </div>
   `;
   answersDiv.innerHTML = "";
@@ -357,7 +385,7 @@ function updateCounter(finished = false) {
   if (finished) {
     counterDiv.textContent = "";
   } else {
-    counterDiv.textContent = `${currentQuestionIndex + 1} / ${quizData.length}`;
+    counterDiv.textContent = `${currentQuestionIndex + 1} / ${maxQuestions}`;
   }
 }
 
@@ -368,5 +396,5 @@ function shuffleArray(array) {
   }
 }
 
-shuffleArray(quizData);
+shuffleArray(selectedQuizData);
 loadQuestion();

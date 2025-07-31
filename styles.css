@@ -2,10 +2,38 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(135deg, #2233cc 30%, #8933cc 80%);
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 3px) 20px 30px,
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 2px) 50px 70px,
+    radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 2px) 80px 120px;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  animation: floatDots 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes floatDots {
+  0% {
+    background-position: 20px 30px, 50px 70px, 80px 120px;
+  }
+  100% {
+    background-position: 120px 130px, 150px 170px, 180px 220px;
+  }
 }
 
 #quiz-container {
@@ -19,13 +47,16 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  z-index: 1;
+  margin: 20px 0;
 }
 
 #question-card {
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   font-size: 1.3rem;
   min-height: 120px;
   display: flex;
@@ -109,4 +140,47 @@ body, html {
 
 #controls button:hover {
   background-color: #004ba0;
+}
+
+#menu-bar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+#menu-bar .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#menu-bar label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+#menu-bar select {
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background: white;
+  cursor: pointer;
+}
+
+.result-icon {
+  position: absolute;
+  left: 20px;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 48px;   /* bigger size */
+  height: 48px;
 }

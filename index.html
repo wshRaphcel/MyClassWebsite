@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OS Processes Quiz</title>
+  <title>IT Quiz</title>
+  <link rel="icon" type="image/png" href="images/Quiz.png">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<header id="menu-bar">
+  <div class="menu-item">
+    <label for="question-count">Questions:</label>
+    <select id="question-count">
+      <option value="5">5</option>
+      <option value="10" selected>10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+    </select>
+  </div>
+
+  <div class="menu-item">
+    <label for="quiz-type">Quiz Type:</label>
+    <select id="quiz-type">
+      <option value="os-processes" selected>OS Processes</option>
+    </select>
+  </div>
+</header>
+
   <div id="quiz-container">
     <div id="question-card"></div>
     <div id="answers"></div>

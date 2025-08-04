@@ -4,61 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IT Quiz</title>
-  <link rel="icon" type="image/png" href="images/Quiz.png">
+  <link rel="icon" type="image/png" href="images/Quiz.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header id="menu-bar">
-  <a href="#" id="logo-link"><img src="images/Quiz.png" alt="Quiz Logo"></a>
-  
-  <div class="menu-item in-quiz">
-    <label for="question-count">Questions:</label>
-    <select id="question-count">
-      <option value="5">5</option>
-      <option value="10" selected>10</option>
-      <option value="20">20</option>
-      <option value="30">30</option>
-    </select>
+  <header id="menu-bar">
+    <a href="#" id="logo-link"><img src="images/Quiz.png" alt="Quiz Logo" /></a>
+
+    <div class="menu-item in-quiz">
+      <label for="question-count">Questions:</label>
+      <select id="question-count">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+      </select>
+    </div>
+
+    <div class="menu-item in-quiz">
+      <label for="quiz-type">Quiz Type:</label>
+      <select id="quiz-type">
+        <option value="os-processes" selected>OS Processes</option>
+        <option value="gather">Gather Requirements</option>
+        <option value="client-engagement">Client Engagement</option>
+      </select>
+    </div>
+  </header>
+
+  <div id="quiz-menu">
+    <div class="quiz-card" data-quiz="os-processes">
+      <h2>OS Processes</h2>
+      <p>Test your knowledge of operating system processes.</p>
+    </div>
+    <div class="quiz-card" data-quiz="gather">
+      <h2>Gather Requirements</h2>
+      <p>Check your understanding of ICT requirement gathering.</p>
+    </div>
+    <div class="quiz-card" data-quiz="client-engagement">
+      <h2>Client Engagement</h2>
+      <p>Explore strategic planning and client interaction skills.</p>
+    </div>
   </div>
 
-  <div class="menu-item in-quiz">
-    <label for="quiz-type">Quiz Type:</label>
-    <select id="quiz-type">
-      <option value="os-processes" selected>OS Processes</option>
-      <option value="gather">Gather Requirements</option>
-      <option value="client-engagement">Client Engagement</option>
-    </select>
+  <div id="quiz-container">
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="question-card"></div>
+    <div id="answers"></div>
+    <div id="feedback"></div>
+    <div id="controls">
+      <button id="next-btn" style="display:none;">Next</button>
+      <button id="restart-btn" style="display:none;">Restart Quiz</button>
+    </div>
+    <div id="counter"></div>
   </div>
-</header>
 
-<!-- QUIZ MENU -->
-<div id="quiz-menu">
-  <div class="quiz-card" data-quiz="os-processes">
-    <h2>OS Processes</h2>
-    <p>Test your knowledge of operating system processes.</p>
-  </div>
-  <div class="quiz-card" data-quiz="gather">
-    <h2>Gather Requirements</h2>
-    <p>Check your understanding of ICT requirement gathering.</p>
-  </div>
-  <div class="quiz-card" data-quiz="client-engagement">
-    <h2>Client Engagement</h2>
-    <p>Explore strategic planning and client interaction skills.</p>
-  </div>
-</div>
-
-<!-- QUIZ CONTAINER -->
-<div id="quiz-container">
-  <div id="question-card"></div>
-  <div id="answers"></div>
-  <div id="feedback"></div>
-  <div id="controls">
-    <button id="next-btn" style="display:none;">Next</button>
-    <button id="restart-btn" style="display:none;">Restart Quiz</button>
-  </div>
-  <div id="counter"></div>
-</div>
-
-<script src="script.js"></script>
+  <script src="js/osQuizData.js"></script>
+  <script src="js/gatherQuizData.js"></script>
+  <script src="js/clientEngagementQuizData.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

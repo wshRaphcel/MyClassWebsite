@@ -1,3 +1,4 @@
+/* ======= Body and Background ======= */
 body {
   margin: 0;
   height: 100vh;
@@ -6,10 +7,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  overflow: hidden;
+  overflow-x: hidden; /* prevent horizontal scroll */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 0;
 }
 
 body::before {
@@ -38,24 +41,54 @@ body::before {
   }
 }
 
-/* Quiz container */
-#quiz-container {
-  background: #f5f5f5;
-  padding: 30px 40px;
+/* ======= Menu Bar and Logo ======= */
+#menu-bar {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: rgba(25, 118, 210, 0.9);
+  padding: 10px 18px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  width: 450px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 10000;
+  color: white;
   max-width: 95vw;
-  text-align: center;
-  display: none; /* hidden until quiz starts */
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  z-index: 1;
-  margin: 20px 0;
+  width: auto;
 }
 
-/* Quiz cards menu */
+#menu-bar img {
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: block;
+}
+
+#menu-bar .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+}
+
+#menu-bar select {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide these items until quiz starts */
+.in-quiz {
+  display: none;
+}
+
+/* ======= Quiz Menu ======= */
 #quiz-menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -67,18 +100,18 @@ body::before {
 }
 
 .quiz-card {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .quiz-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .quiz-card h2 {
@@ -86,12 +119,28 @@ body::before {
   color: #1976d2;
 }
 
-/* Question card */
+/* ======= Quiz Container ======= */
+#quiz-container {
+  background: #f5f5f5;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  max-width: 95vw;
+  text-align: center;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+  margin: 20px 0;
+}
+
 #question-card {
   background-color: #f5f5f5;
   padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   font-size: 1.3rem;
   min-height: 120px;
   display: flex;
@@ -161,8 +210,8 @@ body::before {
   display: flex;
   justify-content: center;
   gap: 15px;
-  position: relative;  /* Add this */
-  padding-bottom: 20px; /* Optional for extra space below buttons */
+  position: relative;
+  padding-bottom: 20px;
 }
 
 #controls button {
@@ -182,58 +231,48 @@ body::before {
   background-color: #004ba0;
 }
 
-/* Top menu bar */
-#menu-bar {
-  position: fixed;
-  top: 12px;
-  left: 12px;
-  background: rgba(25,118,210,0.9);
-  padding: 10px 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  z-index: 1000;
-  color: white;
-  width: auto;       /* shrink to fit content */
-  max-width: 95vw;   /* responsive safeguard */
-}
-
-
-#menu-bar img {
-  height: 40px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-#menu-bar .menu-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-#menu-bar select {
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Hide dropdowns on menu view */
-.in-quiz {
-  display: none;
-}
-
+/* Result Icon Styles */
 .result-icon {
   position: absolute;
-  bottom: -20px;   /* near the bottom */
-  left: 10px;     /* near the left */
+  bottom: -20px;
+  left: 10px;
   width: 60px;
   height: 60px;
-  transform: none; /* remove previous translate */
   z-index: 10;
+  animation: pop 0.3s ease;
 }
 
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Progress Bar */
+#progress-bar-container {
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #1976d2;
+  transition: width 0.3s ease;
+}
+
+/* Button click effect */
+#answers button:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.1s;
+}

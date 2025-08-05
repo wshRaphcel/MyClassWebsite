@@ -296,3 +296,75 @@ body::before {
   background-color: #1976d2;
   transition: width 0.3s ease;
 }
+/* ======= Responsive Styles for Phones ======= */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #menu-bar {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    gap: 10px;
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  #menu-bar img {
+    height: 32px;
+    margin-right: 5px;
+  }
+
+  #quiz-menu {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .quiz-card {
+    padding: 15px;
+  }
+
+  #quiz-container {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 10px;
+    box-sizing: border-box;
+  }
+
+  #question-card {
+    font-size: 1.1rem;
+    padding: 15px;
+    min-height: 80px;
+  }
+
+  #answers button {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  #controls {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 60px;
+  }
+
+  #controls button {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .result-icon {
+    width: 70px;
+    height: 70px;
+    bottom: -35px;
+    left: -10px;
+  }
+
+  #progress-bar-container {
+    margin-bottom: 15px;
+  }
+}

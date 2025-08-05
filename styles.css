@@ -2,7 +2,7 @@
 body {
   margin: 0;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* general text */
   background: linear-gradient(135deg, #2233cc, #5544cc, #8933cc);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -44,9 +44,8 @@ body::before {
 /* ======= Menu Bar and Logo ======= */
 #menu-bar {
   position: fixed;
-  top: 12px;
-  left: 12px;
-  background: rgba(25, 118, 210, 0.9);
+  top: 12px; left: 12px;
+  background: rgba(48, 145, 241, 0.9);
   padding: 10px 18px;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
@@ -64,6 +63,12 @@ body::before {
   cursor: pointer;
   margin-right: 10px;
   display: block;
+  transition: filter 0.3s ease;
+  filter: drop-shadow(0 0 4px white);
+}
+
+#menu-bar img:hover {
+  filter: drop-shadow(0 0 12px white);
 }
 
 #menu-bar .menu-item {
@@ -83,7 +88,6 @@ body::before {
   cursor: pointer;
 }
 
-/* Hide these items until quiz starts */
 .in-quiz {
   display: none;
 }
@@ -122,7 +126,7 @@ body::before {
 /* ======= Quiz Container ======= */
 #quiz-container {
   background: #f5f5f5;
-  padding: 30px 40px;
+  padding: 20px 30px; /* Reduced padding */
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   width: 450px;
@@ -130,29 +134,32 @@ body::before {
   text-align: center;
   display: none; /* hidden by default */
   flex-direction: column;
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
   position: relative;
   z-index: 10;
-  margin: 20px 0;
+  margin: 10px 0; /* Reduced margin */
 }
 
 #question-card {
   background-color: #f5f5f5;
-  padding: 25px 30px;
+  padding: 20px 25px; /* Reduced padding */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   font-size: 1.3rem;
-  min-height: 120px;
+  font-family: 'Roboto', sans-serif; /* Roboto for question */
+  font-weight: 700; /* bold */
+  color: #333333;  /* dark grey text */
+  min-height: 100px; /* Reduced min-height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced margin */
 }
 
 #counter {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px; /* Reduced margin */
+  margin-bottom: 5px; /* Reduced margin */
   font-weight: 600;
   color: #555;
   font-size: 1rem;
@@ -163,23 +170,28 @@ body::before {
 #answers {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px; /* Reduced gap */
 }
 
 #answers button {
   background-color: #2979ff;
   border: none;
   border-radius: 8px;
-  padding: 14px 20px;
+  padding: 12px 18px; /* Reduced padding */
   font-size: 1.1rem;
   color: white;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(41, 121, 255, 0.6);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(41, 121, 255, 0.6), 0 0 10px rgba(41, 121, 255, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: Arial, sans-serif; /* answers keep Arial */
+  position: relative; /* for the highlight effect */
+  overflow: hidden; /* to contain the highlight effect */
 }
 
 #answers button:hover:not(:disabled) {
   background-color: #0059c1;
+  transform: translateY(-2px); /* lift the button slightly */
+  box-shadow: 0 6px 12px rgba(41, 121, 255, 0.7), 0 0 15px rgba(41, 121, 255, 0.5);
 }
 
 #answers button:disabled {
@@ -189,33 +201,34 @@ body::before {
 
 #answers button.correct {
   background-color: #4caf50 !important;
-  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.6);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.6), 0 0 10px rgba(76, 175, 80, 0.4);
 }
 
 #answers button.wrong {
   background-color: #f44336 !important;
-  box-shadow: 0 3px 8px rgba(244, 67, 54, 0.6);
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.6), 0 0 10px rgba(244, 67, 54, 0.4);
 }
 
 #feedback {
   font-size: 1.2rem;
   font-weight: 600;
   min-height: 40px;
-  color: #333;
+  color: #646464;
   user-select: none;
-  margin-top: 15px;
+  margin-top: 10px; /* Reduced margin */
 }
 
 #controls {
   display: flex;
   justify-content: center;
   gap: 15px;
-  position: relative;
-  padding-bottom: 20px;
+  position: relative; /* important for absolute positioning of icons */
+  padding-bottom: 80px; /* Reduced padding */
+  overflow: visible; /* prevent clipping of result icon */
 }
 
 #controls button {
-  padding: 12px 30px;
+  padding: 10px 25px; /* Reduced padding */
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 10px;
@@ -223,23 +236,37 @@ body::before {
   cursor: pointer;
   color: white;
   background-color: #1976d2;
-  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.7);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.7), 0 0 15px rgba(25, 118, 210, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: Arial, sans-serif;
+  position: relative; /* for the highlight effect */
+  overflow: hidden; /* to contain the highlight effect */
 }
 
-#controls button:hover {
-  background-color: #004ba0;
+#controls button:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.1s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.6), 0 0 10px rgba(25, 118, 210, 0.4);
 }
 
-/* Result Icon Styles */
+#controls button:hover:not(:disabled) {
+  background-color: #0059c1;
+  transform: translateY(-2px); /* lift the button slightly */
+  box-shadow: 0 6px 15px rgba(25, 118, 210, 0.7), 0 0 20px rgba(25, 118, 210, 0.5);
+}
+
 .result-icon {
   position: absolute;
-  bottom: -20px;
-  left: 10px;
-  width: 60px;
-  height: 60px;
+  bottom: -50px; /* Moved down by 20px */
+  left: -20px; /* Moved left by 20px */
+  width: 100px; /* Increased size */
+  height: 100px; /* Increased size */
   z-index: 10;
   animation: pop 0.3s ease;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.3)); /* subtle shadow */
+  border-radius: 50%; /* circular icon */
+  object-fit: contain; /* keeps image crisp and maintains aspect ratio */
+  image-rendering: auto; /* reset to default */
 }
 
 @keyframes pop {
@@ -253,7 +280,6 @@ body::before {
   }
 }
 
-/* Progress Bar */
 #progress-bar-container {
   height: 10px;
   background-color: #ccc;
@@ -269,10 +295,4 @@ body::before {
   width: 0%;
   background-color: #1976d2;
   transition: width 0.3s ease;
-}
-
-/* Button click effect */
-#answers button:active:not(:disabled) {
-  transform: scale(0.97);
-  transition: transform 0.1s;
 }

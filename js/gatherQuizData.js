@@ -532,70 +532,112 @@ const gatherQuizData = [
   {
     question: "What should be done if discrepancies appear in gathered data?",
     options: [
-      "Repeat data elicitation for unclear components",
-      "Ignore discrepancies",
-      "Cancel the project",
-      "Remove all qualitative data",
+      "Investigate further to clarify issues",
+      "Ignore them",
+      "Blame the project team",
+      "Publish data immediately",
+    ],
+    answer: 0,
+  },
+  
+  // New questions added:
+  {
+    question: "What is the main goal of stakeholder analysis?",
+    options: [
+      "To understand stakeholder interests and influence",
+      "To create project budgets",
+      "To recruit project staff",
+      "To design user interfaces",
     ],
     answer: 0,
   },
   {
-    question: "What is the purpose of documenting data analysis?",
+    question: "Which technique helps validate the completeness of requirements?",
     options: [
-      "To report findings clearly to stakeholders",
+      "Requirements walkthroughs and reviews",
+      "Ignoring stakeholder feedback",
+      "Focusing only on technical staff",
+      "Skipping documentation",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is the purpose of use cases in requirements gathering?",
+    options: [
+      "To describe how users interact with the system",
+      "To define project budgets",
+      "To schedule meetings",
+      "To list hardware specifications",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is a common challenge in requirements elicitation?",
+    options: [
+      "Conflicting stakeholder needs",
+      "Excessive budget allocation",
+      "Overly simple project goals",
+      "Too much documentation",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is a prototype used for in project requirements?",
+    options: [
+      "To provide a visual model of the system for feedback",
+      "To finalize budgets",
+      "To replace user manuals",
+      "To schedule training sessions",
+    ],
+    answer: 0,
+  },
+  {
+    question: "How does prioritising requirements help a project?",
+    options: [
+      "By focusing on critical features first",
+      "By increasing project scope",
+      "By ignoring minor stakeholders",
+      "By extending deadlines",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What is traceability in requirements management?",
+    options: [
+      "Tracking requirements from origin through implementation",
+      "Deleting old project documents",
+      "Assigning team members to tasks",
+      "Reviewing marketing strategies",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why are workshops useful in requirements gathering?",
+    options: [
+      "They encourage collaboration and consensus among stakeholders",
+      "They reduce project budget",
+      "They delay project milestones",
+      "They limit communication",
+    ],
+    answer: 0,
+  },
+  {
+    question: "What role does feedback play in requirements gathering?",
+    options: [
+      "Helps refine and improve requirements",
+      "Increases project risks",
+      "Eliminates the need for testing",
+      "Reduces documentation quality",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Why is it important to document assumptions in a project?",
+    options: [
+      "To clarify conditions that affect project success",
+      "To reduce training needs",
+      "To assign more resources",
       "To create marketing content",
-      "To store files for legal reasons",
-      "To train new staff only",
-    ],
-    answer: 0,
-  },
-  {
-    question: "What is a sign-off in stakeholder management?",
-    options: [
-      "Formal approval of requirements and analysis",
-      "Email feedback only",
-      "Project cancellation notice",
-      "Budget approval",
-    ],
-    answer: 0,
-  },
-  {
-    question: "Which tools can assist in complex data analysis?",
-    options: [
-      "Statistical software like Prism",
-      "Simple calculators only",
-      "Manual spreadsheets without formulas",
-      "Email clients",
-    ],
-    answer: 0,
-  },
-  {
-    question: "Why is transparency important in data processes?",
-    options: [
-      "Builds trust and reduces long-term business risks",
-      "Increases data storage needs",
-      "Makes projects slower",
-      "Reduces quality",
-    ],
-    answer: 0,
-  },
-  {
-    question: "What is the first step in preparing data for analysis?",
-    options: [
-      "Ensuring data is adequate, accurate, and relevant",
-      "Writing the final report",
-      "Hiring staff",
-      "Purchasing software",
-    ],
-    answer: 0,
-  },
-  {
-    question: "What is the value of analysing grouped stakeholder responses?",
-    options: [
-      "To identify common requirements and conflicts",
-      "To reduce the number of stakeholders",
-      "To avoid difficult decisions",
-      "To delay project milestones",
     ],
     answer: 0,
   },

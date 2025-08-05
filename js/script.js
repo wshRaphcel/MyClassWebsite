@@ -123,6 +123,8 @@ function selectQuiz(quizType) {
     selectedQuizData = gatherQuizData;
   } else if (quizType === "client-engagement") {
     selectedQuizData = clientEngagementQuizData;
+  } else if (quizType === "hyperv") {
+    selectedQuizData = hypervQuizData;
   } else {
     selectedQuizData = osQuizData;
   }
